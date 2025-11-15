@@ -1,0 +1,2 @@
+-- Migration: 001_create_initial_schema.sql
+-- Run: psql -U analytics_user -d analytics_db -f init.sql

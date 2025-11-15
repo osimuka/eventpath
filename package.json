@@ -1,0 +1,24 @@
+{
+  "name": "service-analytics",
+  "version": "1.0.0",
+  "description": "Multi-service event analytics platform",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --recursive run dev",
+    "build": "pnpm --recursive run build",
+    "test": "pnpm --recursive run test",
+    "lint": "pnpm --recursive run lint",
+    "db:migrate": "cd services/api && pnpm run db:migrate",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
